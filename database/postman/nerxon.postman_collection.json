@@ -1,0 +1,388 @@
+{
+	"info": {
+		"_postman_id": "723baa98-6e55-4221-8e0c-d8df9d958481",
+		"name": "nerxon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19129870"
+	},
+	"item": [
+		{
+			"name": "Api",
+			"item": [
+				{
+					"name": "V1",
+					"item": [
+						{
+							"name": "Auth",
+							"item": [
+								{
+									"name": "login",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "default"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"type\": \"email\",\r\n    \"username\": \"faridnewepc78@gmail.com\",\r\n    \"password\": \"12345678\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{LOCAL_BASE_URL}}/auth/login",
+											"host": [
+												"{{LOCAL_BASE_URL}}"
+											],
+											"path": [
+												"auth",
+												"login"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "logout",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "4|XvTURB3xOcFpUwfJhix9Z0xv7uYU7AOeY2T8NOL9",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "default"
+											}
+										],
+										"url": {
+											"raw": "{{LOCAL_BASE_URL}}/auth/logout",
+											"host": [
+												"{{LOCAL_BASE_URL}}"
+											],
+											"path": [
+												"auth",
+												"logout"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "verification",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "default"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"username\": \"faridnewepc78@gmail.com\",\r\n    \"otp_code\": 471002,\r\n    \"password\": \"12345678\",\r\n    \"password_confirmation\": \"12345678\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{LOCAL_BASE_URL}}/auth/verification",
+											"host": [
+												"{{LOCAL_BASE_URL}}"
+											],
+											"path": [
+												"auth",
+												"verification"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "resend",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "default"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"username\": \"faridnewepc78@gmail.com\",\r\n    \"notify_type\": \"register\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{LOCAL_BASE_URL}}/auth/resend",
+											"host": [
+												"{{LOCAL_BASE_URL}}"
+											],
+											"path": [
+												"auth",
+												"resend"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "forgot",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "default"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"type\": \"email\",\r\n    \"username\": \"faridnewepc78@gmail.com\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{LOCAL_BASE_URL}}/auth/forgot",
+											"host": [
+												"{{LOCAL_BASE_URL}}"
+											],
+											"path": [
+												"auth",
+												"forgot"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "update-password",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "default"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"username\": \"faridnewepc78@gmail.com\",\r\n    \"otp_code\": 978643,\r\n    \"password\": \"1234f01234\",\r\n    \"password_confirmation\": \"1234f01234\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{LOCAL_BASE_URL}}/auth/update-password",
+											"host": [
+												"{{LOCAL_BASE_URL}}"
+											],
+											"path": [
+												"auth",
+												"update-password"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "User",
+							"item": [
+								{
+									"name": "profile",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{LOCAL_BASE_URL}}/user/profile",
+											"host": [
+												"{{LOCAL_BASE_URL}}"
+											],
+											"path": [
+												"user",
+												"profile"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "update-profile",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"accept": true
+										}
+									},
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"farid@gmail.com\",\r\n    \"phone_number\": \"+989162154221\",\r\n    \"country\": \"iran\",\r\n    \"city\": \"yazd\",\r\n    \"address\": \"this is a test\",\r\n    \"password\": \"1234f01234\",\r\n    \"password_confirmation\": \"1234f01234\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{LOCAL_BASE_URL}}/user/update-profile",
+											"host": [
+												"{{LOCAL_BASE_URL}}"
+											],
+											"path": [
+												"user",
+												"update-profile"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"auth": {
+								"type": "bearer",
+								"bearer": [
+									{
+										"key": "token",
+										"value": "6|WpWNHpRZ4gLKkeXwJmvQgPMKuPAmAO5SfhD4gPzl",
+										"type": "string"
+									}
+								]
+							},
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "LOCAL_BASE_URL",
+			"value": "http://nerxon-backend.test/api",
+			"type": "string"
+		},
+		{
+			"key": "SERVER_BASE_URL",
+			"value": "https://api.nerxonapi.com/api",
+			"type": "string"
+		}
+	]
+}
